@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Application Features</string>
+
+    <!-- Notification Channel -->
+    <string name="notification_channel_name">notification_application_feature</string>
+    <string name="notification_channel_description">This channel used for download progress notification</string>
+
+    <string name="cancel">Cancel</string>
+</resources>
