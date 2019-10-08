@@ -12,6 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".features.content.design.DesignDrawerActivity"
+            android:parentActivityName=".features.DesignFeature"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bn.applicationfeatures.features.DesignFeature" />
+        </activity>
+        <activity
+            android:name=".features.content.design.ui.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".features.DesignFeature">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bn.applicationfeatures.features.DesignFeature" />
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,26 +36,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".features.DownloadFeature"
             android:label="Download Feature"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".features.content.download.DownloadProgressActivity"
             android:label="Download Progress"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".features.GIFPlayerFeature"
             android:label="GIF Player"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".features.RecyclerViewFeature"
             android:label="RecyclerView"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.DesignFeature"
+            android:label="Design Feature"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.AnimationTransitionFeature"
+            android:label="Animation Transition"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
             android:name=".app.service.DownloadService"
@@ -54,7 +75,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-
     </application>
 
 </manifest>

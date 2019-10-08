@@ -16,6 +16,8 @@ public class FeatureUtil {
         mapContent.put(1L, DownloadFeature.class);
         mapContent.put(2L, GIFPlayerFeature.class);
         mapContent.put(3L, RecyclerViewFeature.class);
+        mapContent.put(4L, AnimationTransitionFeature.class);
+        mapContent.put(5L, DesignFeature.class);
     }
 
     public static List<MainFeatureModel> getListFeature() {
@@ -45,6 +47,10 @@ public class FeatureUtil {
                 return "GIF Player";
             case 2:
                 return "RecyclerView";
+            case 3:
+                return "Animation Transition";
+            case 4:
+                return "Design";
             default:
                 return "Not Available";
         }
@@ -58,6 +64,8 @@ public class FeatureUtil {
                 return R.drawable.ic_gif_black_24dp;
             case 2:
                 return R.drawable.ic_view_list_black_24dp;
+            case 3:
+                return R.drawable.ic_animation;
             default:
                 return R.drawable.ic_error_outline_black_24dp;
         }
