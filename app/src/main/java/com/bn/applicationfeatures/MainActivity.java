@@ -11,14 +11,11 @@ import com.bn.applicationfeatures.app.model.MainFeatureModel;
 import com.bn.applicationfeatures.app.adapter.MainFeatureListAdapter;
 import com.bn.applicationfeatures.app.util.FeatureUtil;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends AppCompatActivity
+        implements AdapterView.OnItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +26,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         List<MainFeatureModel> listContent = new ArrayList<>();
         MainFeatureListAdapter adapter = new MainFeatureListAdapter(this, listContent);
-
-        List<String> itemlist = new ArrayList<>();
-        try {
-            JSONArray array = new JSONArray("[{\"nama\" : \"bagas\"}]");
-            JSONObject obj = array.getJSONObject(0);
-            String nama = obj.getString("nama");
-
-            itemlist.add("Item 1");
-            itemlist.add("Item 2");
-            itemlist.add("Item 3");
-            itemlist.add("Item 4");
-
-        } catch (JSONException e) {
-
-        }
-
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);

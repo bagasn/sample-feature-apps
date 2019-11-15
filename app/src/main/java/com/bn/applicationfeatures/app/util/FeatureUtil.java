@@ -18,6 +18,7 @@ public class FeatureUtil {
         mapContent.put(3L, RecyclerViewFeature.class);
         mapContent.put(4L, AnimationTransitionFeature.class);
         mapContent.put(5L, DesignFeature.class);
+        mapContent.put(6L, CameraFeature.class);
     }
 
     public static List<MainFeatureModel> getListFeature() {
@@ -51,6 +52,8 @@ public class FeatureUtil {
                 return "Animation Transition";
             case 4:
                 return "Design";
+            case 5:
+                return "Custom Camera";
             default:
                 return "Not Available";
         }
@@ -66,6 +69,8 @@ public class FeatureUtil {
                 return R.drawable.ic_view_list_black_24dp;
             case 3:
                 return R.drawable.ic_animation;
+            case 5:
+                return R.drawable.ic_camera;
             default:
                 return R.drawable.ic_error_outline_black_24dp;
         }
